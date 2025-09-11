@@ -1,9 +1,14 @@
 package com.tlj.aicodegenerator.service;
 
+import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+import com.tlj.aicodegenerator.model.dto.UserQueryRequest;
 import com.tlj.aicodegenerator.model.entity.User;
 import com.tlj.aicodegenerator.model.vo.LoginUserVO;
+import com.tlj.aicodegenerator.model.vo.UserVO;
 import jakarta.servlet.http.HttpServletRequest;
+
+import java.util.List;
 
 /**
  * 用户 服务层。
@@ -57,4 +62,23 @@ public interface UserService extends IService<User> {
      */
     boolean userLogout(HttpServletRequest request);
 
+    /**
+     * 获取用户信息
+     * @param user
+     * @return
+     */
+    UserVO getUserVO(User user);
+    /**
+     * 获取用户信息列表
+     * @param userList
+     * @return
+     */
+    List<UserVO> getUserVOList(List<User> userList);
+
+    /**
+     * 构造queryWrapper
+     * @param userQueryRequest
+     * @return
+     */
+    QueryWrapper getQueryWrapper(UserQueryRequest userQueryRequest);
 }
