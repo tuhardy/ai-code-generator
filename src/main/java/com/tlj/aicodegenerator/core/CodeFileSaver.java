@@ -12,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 @Slf4j
-@Deprecated
 public class CodeFileSaver {
     private static final String FILE_SAVE_ROOT_DIR=System.getProperty("user.dir")+"/tmp/code_output";
 
