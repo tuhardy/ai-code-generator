@@ -8,7 +8,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 public class MybatisFlexGenerator {
     //定义要生成的表名
-    private static final String[] TABLE_NAMES = {"user"};
+    private static final String[] TABLE_NAMES = {"app"};
 
     public static void main(String[] args) {
         //读取配置文件
