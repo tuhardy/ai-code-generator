@@ -8,7 +8,7 @@ import com.mybatisflex.spring.service.impl.ServiceImpl;
 import com.tlj.aicodegenerator.exception.BusinessException;
 import com.tlj.aicodegenerator.exception.ErrorCode;
 import com.tlj.aicodegenerator.mapper.UserMapper;
-import com.tlj.aicodegenerator.model.dto.UserQueryRequest;
+import com.tlj.aicodegenerator.model.dto.user.UserQueryRequest;
 import com.tlj.aicodegenerator.model.entity.User;
 import com.tlj.aicodegenerator.model.enums.UserRoleEnum;
 import com.tlj.aicodegenerator.model.vo.LoginUserVO;

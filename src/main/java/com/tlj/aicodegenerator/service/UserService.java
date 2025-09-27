@@ -2,7 +2,7 @@ package com.tlj.aicodegenerator.service;
 
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
-import com.tlj.aicodegenerator.model.dto.UserQueryRequest;
+import com.tlj.aicodegenerator.model.dto.user.UserQueryRequest;
 import com.tlj.aicodegenerator.model.entity.User;
 import com.tlj.aicodegenerator.model.vo.LoginUserVO;
 import com.tlj.aicodegenerator.model.vo.UserVO;

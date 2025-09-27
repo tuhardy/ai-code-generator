@@ -10,7 +10,7 @@ import com.tlj.aicodegenerator.constant.UserConstant;
 import com.tlj.aicodegenerator.exception.BusinessException;
 import com.tlj.aicodegenerator.exception.ErrorCode;
 import com.tlj.aicodegenerator.exception.ThrowUtils;
-import com.tlj.aicodegenerator.model.dto.*;
+import com.tlj.aicodegenerator.model.dto.user.*;
 import com.tlj.aicodegenerator.model.entity.User;
 import com.tlj.aicodegenerator.model.vo.LoginUserVO;
 import com.tlj.aicodegenerator.model.vo.UserVO;
