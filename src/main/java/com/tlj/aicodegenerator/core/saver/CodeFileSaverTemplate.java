@@ -1,7 +1,6 @@
 package com.tlj.aicodegenerator.core.saver;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.tlj.aicodegenerator.exception.BusinessException;
 import com.tlj.aicodegenerator.exception.ErrorCode;
@@ -23,13 +22,14 @@ public abstract class CodeFileSaverTemplate<T> {
     /**
      * 模板方法模式 - 保存代码文件的标准流程
      * @param result
+     * @param appId
      * @return
      */
-    public final File saveCode(T result){
+    public final File saveCode(T result, Long appId){
         //1.验证输入
-        ValidateInput(result);
+        ValidateInput(result, appId);
         //2.构造唯一目录
-        String bashDirPath = buildUniqueDir();
+        String bashDirPath = buildUniqueDir(appId);
         //3.保存文件（具体实现交给子类）
         saveFiles(result, bashDirPath);
         //4.返回文件目录对象
@@ -40,19 +40,23 @@ public abstract class CodeFileSaverTemplate<T> {
      *  验证输入参数（可由子类覆盖）
      * @param result
      */
-    protected void ValidateInput(T result) {
+    protected void ValidateInput(T result, Long appId) {
         if(result == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"保存代码失败，代码结果不能为空");
+        }
+        if(appId == null){
+            throw new BusinessException(ErrorCode.PARAMS_ERROR,"保存代码失败，业务ID不能为空");
         }
     }
 
 
     /**
      *  生成代码文件路径
+     * @param appId 业务ID
      */
-    protected String buildUniqueDir() {
+    protected String buildUniqueDir(Long appId) {
         String bizType=getCodeType().getValue();
-        String uniqueDirName = StrUtil.format("{}_{}", bizType, IdUtil.getSnowflakeNextIdStr());
+        String uniqueDirName = StrUtil.format("{}_{}", bizType,appId);
         String dirPath = FILE_SAVE_ROOT_DIR + File.separator + uniqueDirName;
         FileUtil.mkdir(dirPath);
         return dirPath;

@@ -4,7 +4,9 @@ import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
 import com.tlj.aicodegenerator.model.dto.app.AppQueryRequest;
 import com.tlj.aicodegenerator.model.entity.App;
+import com.tlj.aicodegenerator.model.entity.User;
 import com.tlj.aicodegenerator.model.vo.AppVO;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -14,6 +16,14 @@ import java.util.List;
  * @author <a href='https://github.com/tlj-x'>tlj</a>
  */
 public interface AppService extends IService<App> {
+    /**
+     * 应用聊天生成代码（流式生成）
+     * @param appId
+     * @param message
+     * @param loginUser
+     * @return
+     */
+    Flux<String> chatToGenCode(Long appId, String message, User loginUser);
     /**
      * 根据App实体获取AppVO对象
      * @param app

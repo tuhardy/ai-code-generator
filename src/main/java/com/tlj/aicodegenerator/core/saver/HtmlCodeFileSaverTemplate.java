@@ -18,8 +18,8 @@ public class HtmlCodeFileSaverTemplate extends CodeFileSaverTemplate<HtmlCodeRes
     }
 
     @Override
-    protected void ValidateInput(HtmlCodeResult result) {
-        super.ValidateInput(result);
+    protected void ValidateInput(HtmlCodeResult result,Long appId) {
+        super.ValidateInput(result,appId);
         //校验HTML代码是否为空
         if(StrUtil.isBlank(result.getHtmlCode())){
             throw new BusinessException(ErrorCode.SYSTEM_ERROR,"HTML代码不能为空");
