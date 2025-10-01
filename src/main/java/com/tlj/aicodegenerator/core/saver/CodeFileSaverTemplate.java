@@ -2,6 +2,7 @@ package com.tlj.aicodegenerator.core.saver;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
+import com.tlj.aicodegenerator.constant.AppConstant;
 import com.tlj.aicodegenerator.exception.BusinessException;
 import com.tlj.aicodegenerator.exception.ErrorCode;
 import com.tlj.aicodegenerator.model.enums.CodeGenTypeEnum;
@@ -17,7 +18,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 public abstract class CodeFileSaverTemplate<T> {
-    private static final String FILE_SAVE_ROOT_DIR=System.getProperty("user.dir")+"/tmp/code_output";
+    private static final String FILE_SAVE_ROOT_DIR= AppConstant.CODE_OUTPUT_ROOT_DIR;
 
     /**
      * 模板方法模式 - 保存代码文件的标准流程
