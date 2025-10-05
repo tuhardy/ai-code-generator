@@ -6,7 +6,7 @@ import com.tlj.aicodegenerator.model.entity.ChatHistory;
 /**
  * 对话历史 映射层。
  *
- * @author <a href='https://github.com/tlj-x'>tlj</a>
+ * @author <a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>
  */
 public interface ChatHistoryMapper extends BaseMapper<ChatHistory> {
 

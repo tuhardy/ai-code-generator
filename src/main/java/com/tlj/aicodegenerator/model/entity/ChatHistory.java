@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 /**
  * 对话历史 实体类。
  *
- * @author <a href='https://github.com/tlj-x'>tlj</a>
+ * @author <a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>
  */
 @Data
 @Builder

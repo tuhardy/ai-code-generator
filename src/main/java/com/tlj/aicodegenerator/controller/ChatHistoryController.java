@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 /**
  * 对话历史 控制层。
  *
- * @author <a href='https://github.com/tlj-x'>tlj</a>
+ * @author <a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>
  */
 @RestController
 @RequestMapping("/chatHistory")

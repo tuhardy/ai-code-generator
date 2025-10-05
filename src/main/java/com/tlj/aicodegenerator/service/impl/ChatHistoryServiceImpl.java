@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
 /**
  * 对话历史 服务层实现。
  *
- * @author <a href='https://github.com/tlj-x'>tlj</a>
+ * @author <a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>
  */
 @Service
 public class ChatHistoryServiceImpl extends ServiceImpl<ChatHistoryMapper, ChatHistory>  implements ChatHistoryService{

@@ -27,7 +27,7 @@ import static com.tlj.aicodegenerator.constant.UserConstant.USER_LOGIN_STATE;
 /**
  * 用户 服务层实现。
  *
- * @author <a href='https://github.com/tlj-x'>tlj</a>
+ * @author <a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>  implements UserService{

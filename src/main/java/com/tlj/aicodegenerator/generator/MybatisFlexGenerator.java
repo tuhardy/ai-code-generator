@@ -92,7 +92,7 @@ public class MybatisFlexGenerator {
         globalConfig.enableController();
         //设置作者信息
         globalConfig.getJavadocConfig()
-                .setAuthor("<a href='https://github.com/tlj-x'>tlj</a>")
+                .setAuthor("<a href='https://github.com/tuhardy/ai-code-generator'>tlj</a>")
                 .setSince("");
         return globalConfig;
     }
