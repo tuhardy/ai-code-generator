@@ -106,13 +106,13 @@ public class ChatHistoryServiceImpl extends ServiceImpl<ChatHistoryMapper, ChatH
                 .like("message", message);
         //根据会话历史记录创建时间进行游标查询
         if(lastCreateTime!=null){
-            queryWrapper.le("create_time", lastCreateTime);
+            queryWrapper.le("createTime", lastCreateTime);
         }
         //排序
         if(StrUtil.isNotBlank(sortField)){
             queryWrapper.orderBy(sortField,"ascend".equals(sortOrder));
         }else {
-            queryWrapper.orderBy("create_time",false);
+            queryWrapper.orderBy("createTime",false);
         }
         return queryWrapper;
     }
