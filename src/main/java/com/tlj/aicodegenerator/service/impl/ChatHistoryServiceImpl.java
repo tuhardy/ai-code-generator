@@ -100,9 +100,9 @@ public class ChatHistoryServiceImpl extends ServiceImpl<ChatHistoryMapper, ChatH
         String sortField = request.getSortField();
         String sortOrder = request.getSortOrder();
         queryWrapper.eq("id", id)
-                .eq("app_id", appId)
-                .eq("message_type", messageType)
-                .eq("user_id", userId)
+                .eq("appId", appId)
+                .eq("messageType", messageType)
+                .eq("userId", userId)
                 .like("message", message);
         //根据会话历史记录创建时间进行游标查询
         if(lastCreateTime!=null){
